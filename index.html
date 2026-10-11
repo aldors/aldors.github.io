@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>aldo@backend:~$ Aldo Ruiz · Backend Jr</title>
+  <meta name="description" content="Aldo Ruiz, estudiante de Ing. en Sistemas. Backend Jr con Java + Spring Boot, MySQL. Proyectos: e-commerce, deuda_cero, event_pass." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&gt;_</text></svg>">
+</head>
+<body>
+  <div class="bg-mega" aria-hidden="true">BACKEND</div>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#hero"><span class="brand-prompt">aldo@backend</span><span class="brand-dim">:~$</span></a>
+      <nav class="nav" aria-label="Navegación">
+        <a href="#sobre-mi" data-i18n="nav.about">sobre-mí</a>
+        <a href="#formacion" data-i18n="nav.edu">formación</a>
+        <a href="#stack" data-i18n="nav.stack">stack</a>
+        <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
+        <a href="#contacto" data-i18n="nav.contact">contacto</a>
+      </nav>
+      <div class="top-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma / Language">
+          <button id="btn-es" class="active">ES</button>
+          <button id="btn-en">EN</button>
+        </div>
+        <button id="menu-btn" aria-label="Menú">≡</button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil">
+      <a href="#sobre-mi" data-i18n="nav.about">sobre-mí</a>
+      <a href="#formacion" data-i18n="nav.edu">formación</a>
+      <a href="#stack" data-i18n="nav.stack">stack</a>
+      <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
+      <a href="#contacto" data-i18n="nav.contact">contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">~/bienvenida</div>
+        </div>
+        <div class="terminal-body">
+          <p class="dim cmd">$ whoami</p>
+          <h1 class="hero-name mega-outline">ALDO<br />RUIZ<span class="caret-thin" aria-hidden="true"></span></h1>
+          <p class="hero-sub">— Backend Jr · Java + Spring Boot</p>
+          <p class="hero-tag" data-i18n="hero.tag">Estudiante de último año de Ing. en Sistemas. Construyo APIs REST con Java + Spring Boot y MySQL.</p>
+          <p class="status"><span class="dot-ok"></span><span data-i18n="hero.open">abierto a prácticas / trainee · Michoacán, México · remoto</span></p>
+          <div class="hero-btns">
+            <a href="#proyectos" class="btn primary" data-i18n="hero.btnProjects">ver proyectos</a>
+            <a href="#contacto" class="btn" data-i18n="hero.btnContact">contactar</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="window reveal console">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">consola — escribe `help`</div>
+        </div>
+        <div class="terminal-body compact">
+          <div id="term-output" class="term-output" aria-live="polite"></div>
+          <form id="term-form" class="term-input-row" autocomplete="off">
+            <span class="prompt">aldo@backend:~$</span>
+            <input id="term-input" type="text" spellcheck="false" aria-label="Terminal" placeholder="help..." autocomplete="off" />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">$ cat sobre-mi.txt</div>
+        </div>
+        <div class="terminal-body narrow">
+          <h2><span class="prompt-dim">$</span> <span data-i18n="about.title">sobre mí</span></h2>
+          <p data-i18n="about.p1">Tengo 20 años y curso el último año de Ingeniería en Sistemas Computacionales (2024 — 2027/28). Programo en Java: POO, programación funcional, collections y exceptions. En backend uso Spring Boot con APIs REST, persistencia, validaciones y seguridad.</p>
+          <p class="dim" data-i18n="about.p2">Busco mi primera oportunidad como trainee o practicante para aportar en APIs reales.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formacion" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">$ cat formacion.log</div>
+        </div>
+        <div class="terminal-body narrow">
+          <h2><span class="prompt-dim">$</span> <span data-i18n="edu.title">formación</span></h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="tl-date">2024 — 2027/28</span>
+              <strong data-i18n="edu.e1t">Ing. en Sistemas Computacionales · último año</strong>
+              <p data-i18n="edu.e1">POO, estructuras de datos, bases de datos y desarrollo backend con Java.</p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">ago 2026</span>
+              <strong data-i18n="edu.e2t">Certificado en SQL · aprendesql.dev</strong>
+              <p><a href="https://www.aprendesql.dev/certificado/d119493c-c82a-4a86-9715-8ddc0021f057" target="_blank" rel="noopener" data-i18n="edu.e2">ver certificado ↗</a></p>
+            </div>
+            <div class="tl-item">
+              <span class="tl-date">next</span>
+              <strong data-i18n="edu.e3t">Buscando prácticas / trainee backend</strong>
+              <p class="dim" data-i18n="edu.e3">Java + Spring Boot · MySQL · Git. Disponibilidad inmediata.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">$ stack --list</div>
+        </div>
+        <div class="terminal-body narrow">
+          <h2><span class="prompt-dim">$</span> <span data-i18n="stack.title">stack</span></h2>
+          <div class="skills">
+            <div class="skill"><span class="skill-name"><i class="devicon-java-plain"></i> Java</span><span class="dim">POO · programación funcional · collections · exceptions</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-spring-plain"></i> Spring Boot</span><span class="dim">REST · persistencia · validación · seguridad</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-mysql-plain"></i> MySQL</span><span class="dim">modelado · consultas · agregaciones</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-git-plain"></i><i class="devicon-github-original"></i> Git · GitHub</span><span class="dim">versionado · ramas · colaboración</span></div>
+            <div class="skill"><span class="skill-name"><img class="brand-ico" src="https://cdn.simpleicons.org/apachemaven/7ddfa0" alt="Maven" loading="lazy" /><img class="brand-ico" src="https://cdn.simpleicons.org/postman/7ddfa0" alt="Postman" loading="lazy" /> Maven · Postman</span><span class="dim">build · prueba de endpoints</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-bash-plain"></i> Terminal</span><span class="dim" data-i18n="stack.term">bash · navegación · permisos</span></div>
+            <div class="skill"><span class="skill-name"><span class="mini-badge">{}</span> <span data-i18n="stack.fund">Fundamentos</span></span><span class="dim">HTTP · JSON · buenas prácticas</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">$ ls ./projects</div>
+        </div>
+        <div class="terminal-body narrow">
+          <h2><span class="prompt-dim">$</span> <span data-i18n="proj.title">proyectos</span></h2>
+          <p class="dim small" data-i18n="proj.sub">3 APIs en mejora continua. Código abierto en GitHub.</p>
+          <div class="projects">
+            <article class="project">
+              <strong>e-commerce <span class="dim small">· abr 2026</span></strong>
+              <p data-i18n="proj.p1">API REST con Spring Boot para comercio electrónico: catálogo, carrito y pedidos, usuarios y stock, con JPA/Hibernate, validaciones y MySQL. Segura con Spring Security: JWT, roles y sesiones.</p>
+              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/e-commerce" target="_blank" rel="noopener">code ↗</a></div>
+            </article>
+            <article class="project">
+              <strong>deuda_cero <span class="dim small">· jul 2026</span></strong>
+              <p data-i18n="proj.p2">API REST con Spring Boot para gastos compartidos: registro de gastos entre usuarios, cálculo de saldos y deudas, con validaciones y MySQL. Segura con JWT, roles y sesiones.</p>
+              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/deuda_cero" target="_blank" rel="noopener">code ↗</a></div>
+            </article>
+            <article class="project">
+              <strong>event_pass <span class="dim small">· sep 2026</span></strong>
+              <p data-i18n="proj.p3">API REST con Spring Boot para eventos: creación y publicación, reserva y venta de boletos y validación de entradas para control de acceso, con MySQL. Segura con JWT, roles y sesiones.</p>
+              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/event_pass" target="_blank" rel="noopener">code ↗</a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section">
+      <div class="window reveal">
+        <div class="window-bar">
+          <div class="traffic"><span></span><span></span><span></span></div>
+          <div class="window-title">$ ./contactar.sh</div>
+        </div>
+        <div class="terminal-body narrow">
+          <h2><span class="prompt-dim">$</span> <span data-i18n="contact.title">contacto</span></h2>
+          <p class="dim" data-i18n="contact.sub">¿Tienes prácticas o una vacante trainee? Respondo en menos de 24h.</p>
+          <div class="contact-links">
+            <button class="linklike" data-copy="aldorgithub@gmail.com">aldorgithub@gmail.com ⧉</button>
+            <a href="https://github.com/aldors" target="_blank" rel="noopener">github ↗</a>
+            <span class="disabled" title="LinkedIn">linkedin</span>
+            <span class="disabled" title="CV">↓ CV</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Aldo Ruiz</span>
+    <span class="dim">Michoacán, MX</span>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
