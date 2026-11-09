@@ -3,8 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>aldo@backend:~$ Aldo Ruiz · Backend Jr</title>
-  <meta name="description" content="Aldo Ruiz, estudiante de Ing. en Sistemas. Backend Jr con Java + Spring Boot, MySQL. Proyectos: e-commerce, deuda_cero, event_pass." />
+  <title>aldo@backend:~$ Aldo Ruiz · Desarrollador Backend</title>
+  <meta name="description" content="Aldo Ruiz, desarrollador backend con Java 21 + Spring Boot y MySQL. APIs REST con JWT, testing y documentación OpenAPI." />
+  <meta property="og:title" content="Aldo Ruiz · Desarrollador Backend" />
+  <meta property="og:description" content="APIs REST con Java 21, Spring Boot, MySQL, JWT, testing y documentación OpenAPI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Aldo Ruiz · Desarrollador Backend" />
+  <meta name="twitter:description" content="APIs REST con Java 21, Spring Boot, MySQL, JWT, testing y documentación OpenAPI." />
+  <meta name="theme-color" id="theme-color" content="#030605" />
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aldo Ruiz",
+      "jobTitle": "Desarrollador Backend",
+      "description": "Desarrollador backend con Java 21, Spring Boot y MySQL.",
+      "sameAs": ["https://github.com/aldors"],
+      "knowsAbout": ["Java", "Spring Boot", "Spring Security", "JWT", "MySQL", "REST APIs", "Swagger/OpenAPI", "Docker", "JUnit", "Mockito"],
+      "knowsLanguage": ["es", "en"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Michoacán",
+        "addressCountry": "MX"
+      }
+    }
+  </script>
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.dataset.theme = saved === "light" ? "light" : "dark";
+      } catch (e) {
+        document.documentElement.dataset.theme = "dark";
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
@@ -19,13 +54,21 @@
     <div class="topbar-inner">
       <a class="brand" href="#hero"><span class="brand-prompt">aldo@backend</span><span class="brand-dim">:~$</span></a>
       <nav class="nav" aria-label="Navegación">
+        <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
+        <a href="#stack" data-i18n="nav.stack">stack</a>
         <a href="#sobre-mi" data-i18n="nav.about">sobre-mí</a>
         <a href="#formacion" data-i18n="nav.edu">formación</a>
-        <a href="#stack" data-i18n="nav.stack">stack</a>
-        <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
-        <a href="#contacto" data-i18n="nav.contact">contacto</a>
       </nav>
       <div class="top-actions">
+        <button id="theme-btn" class="theme-btn" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+          </svg>
+        </button>
         <div class="lang-toggle" role="group" aria-label="Idioma / Language">
           <button id="btn-es" class="active">ES</button>
           <button id="btn-en">EN</button>
@@ -34,11 +77,10 @@
       </div>
     </div>
     <nav id="mobile-nav" class="mobile-nav" aria-label="Navegación móvil">
+      <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
+      <a href="#stack" data-i18n="nav.stack">stack</a>
       <a href="#sobre-mi" data-i18n="nav.about">sobre-mí</a>
       <a href="#formacion" data-i18n="nav.edu">formación</a>
-      <a href="#stack" data-i18n="nav.stack">stack</a>
-      <a href="#proyectos" data-i18n="nav.projects">proyectos</a>
-      <a href="#contacto" data-i18n="nav.contact">contacto</a>
     </nav>
   </header>
 
@@ -52,12 +94,42 @@
         <div class="terminal-body">
           <p class="dim cmd">$ whoami</p>
           <h1 class="hero-name mega-outline">ALDO<br />RUIZ<span class="caret-thin" aria-hidden="true"></span></h1>
-          <p class="hero-sub">— Backend Jr · Java + Spring Boot</p>
-          <p class="hero-tag" data-i18n="hero.tag">Estudiante de último año de Ing. en Sistemas. Construyo APIs REST con Java + Spring Boot y MySQL.</p>
-          <p class="status"><span class="dot-ok"></span><span data-i18n="hero.open">abierto a prácticas / trainee · Michoacán, México · remoto</span></p>
+          <p class="hero-sub" data-i18n="hero.sub">— Desarrollador Backend · Java 21 + Spring Boot</p>
+          <p class="hero-tag" data-i18n="hero.tag">Construyo APIs REST con Java 21, Spring Boot y MySQL, con JWT, testing y documentación OpenAPI.</p>
+          <p class="status"><span class="dot-ok"></span><span data-i18n="hero.open">disponible para trabajar · Michoacán, México · inglés B1</span></p>
           <div class="hero-btns">
             <a href="#proyectos" class="btn primary" data-i18n="hero.btnProjects">ver proyectos</a>
-            <a href="#contacto" class="btn" data-i18n="hero.btnContact">contactar</a>
+          </div>
+          <div class="hero-contact" aria-label="Contacto">
+            <a class="contact-chip" href="mailto:aldorgithub@gmail.com?subject=Oportunidad%20backend" aria-label="Enviar correo a aldorgithub@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 6-10 7L2 6"></path>
+              </svg>
+              <span>aldorgithub@gmail.com</span>
+            </a>
+            <a class="contact-chip" href="https://github.com/aldors" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.3 0C6.9 3.8 5.8 4.1 5.8 4.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4.4 10.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path>
+              </svg>
+              <span>GitHub</span>
+            </a>
+            <span class="contact-chip disabled" title="LinkedIn" aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+              <span>LinkedIn</span>
+            </span>
+            <span class="contact-chip disabled" title="CV" aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v12"></path>
+                <path d="m7 10 5 5 5-5"></path>
+                <path d="M5 21h14"></path>
+              </svg>
+              <span>CV</span>
+            </span>
           </div>
         </div>
       </div>
@@ -77,44 +149,147 @@
       </div>
     </section>
 
-    <section id="sobre-mi" class="section">
+    <section id="proyectos" class="section">
       <div class="window reveal">
         <div class="window-bar">
           <div class="traffic"><span></span><span></span><span></span></div>
-          <div class="window-title">$ cat sobre-mi.txt</div>
+          <div class="window-title">$ ls ./projects</div>
         </div>
         <div class="terminal-body narrow">
-          <h2><span class="prompt-dim">$</span> <span data-i18n="about.title">sobre mí</span></h2>
-          <p data-i18n="about.p1">Tengo 20 años y curso el último año de Ingeniería en Sistemas Computacionales (2024 — 2027/28). Programo en Java: POO, programación funcional, collections y exceptions. En backend uso Spring Boot con APIs REST, persistencia, validaciones y seguridad.</p>
-          <p class="dim" data-i18n="about.p2">Busco mi primera oportunidad como trainee o practicante para aportar en APIs reales.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="formacion" class="section">
-      <div class="window reveal">
-        <div class="window-bar">
-          <div class="traffic"><span></span><span></span><span></span></div>
-          <div class="window-title">$ cat formacion.log</div>
-        </div>
-        <div class="terminal-body narrow">
-          <h2><span class="prompt-dim">$</span> <span data-i18n="edu.title">formación</span></h2>
-          <div class="timeline">
-            <div class="tl-item">
-              <span class="tl-date">2024 — 2027/28</span>
-              <strong data-i18n="edu.e1t">Ing. en Sistemas Computacionales · último año</strong>
-              <p data-i18n="edu.e1">POO, estructuras de datos, bases de datos y desarrollo backend con Java.</p>
-            </div>
-            <div class="tl-item">
-              <span class="tl-date">ago 2026</span>
-              <strong data-i18n="edu.e2t">Certificado en SQL · aprendesql.dev</strong>
-              <p><a href="https://www.aprendesql.dev/certificado/d119493c-c82a-4a86-9715-8ddc0021f057" target="_blank" rel="noopener" data-i18n="edu.e2">ver certificado ↗</a></p>
-            </div>
-            <div class="tl-item">
-              <span class="tl-date">next</span>
-              <strong data-i18n="edu.e3t">Buscando prácticas / trainee backend</strong>
-              <p class="dim" data-i18n="edu.e3">Java + Spring Boot · MySQL · Git. Disponibilidad inmediata.</p>
-            </div>
+          <h2><span class="prompt-dim">$</span> <span data-i18n="proj.title">proyectos</span></h2>
+          <p class="dim small" data-i18n="proj.sub">3 proyectos backend con Java 21, Spring Boot, JWT y MySQL.</p>
+          <div class="projects">
+            <article class="project">
+              <div class="project-media">
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <div class="carousel-slide">
+                      <img src="img/event-pass-inicio.png" width="1338" height="551" alt="Pantalla de inicio del proyecto Event Pass" loading="lazy" title="Ampliar imagen" />
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="img/event-pass-eventos.png" width="1339" height="538" alt="Listado de eventos del proyecto Event Pass" loading="lazy" title="Ampliar imagen" />
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" type="button" aria-label="Imagen anterior">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                  </button>
+                  <button class="carousel-btn next" type="button" aria-label="Imagen siguiente">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                  </button>
+                  <button class="carousel-zoom" type="button" aria-label="Ampliar imagen">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6M8 11h6"></path></svg>
+                  </button>
+                  <div class="carousel-dots" aria-label="Seleccionar imagen"></div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <div class="project-title">
+                    <strong>Event Pass</strong>
+                    <span class="project-featured" data-i18n="proj.featured">destacado</span>
+                  </div>
+                  <span class="project-date">2026 · <span data-i18n="proj.statusDone">completado</span></span>
+                </div>
+                <p class="project-role" data-i18n="proj.role">Backend Developer · proyecto personal</p>
+                <p data-i18n="proj.p1">API REST para el ciclo completo de boletos: eventos, reservas, pago con Stripe en modo test, PDF con QR y validación en puerta.</p>
+                <ul class="project-highlights">
+                  <li data-i18n="proj.h1a">Reservas con expiración de 15 minutos y tareas programadas para liberar stock.</li>
+                  <li data-i18n="proj.h1b">Roles, refresh tokens, Swagger/OpenAPI y verificación pública de boletos.</li>
+                </ul>
+                <ul class="project-tags" aria-label="Tecnologías">
+                  <li>Java 21</li>
+                  <li>Spring Boot</li>
+                  <li>JWT</li>
+                  <li>Stripe</li>
+                  <li>QR/PDF</li>
+                  <li>Swagger</li>
+                </ul>
+                <div class="meta"><a href="https://github.com/aldors/event_pass" target="_blank" rel="noopener" data-i18n="proj.repo">ver repositorio</a></div>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-media">
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <div class="carousel-slide">
+                      <img src="img/deuda-cero-dashboard-general.png" width="1100" height="599" alt="Dashboard general del proyecto Deuda Cero" loading="lazy" title="Ampliar imagen" />
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="img/deuda-cero-dashboard-grupo.png" width="1094" height="628" alt="Dashboard de grupo del proyecto Deuda Cero" loading="lazy" title="Ampliar imagen" />
+                    </div>
+                  </div>
+                  <button class="carousel-btn prev" type="button" aria-label="Imagen anterior">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+                  </button>
+                  <button class="carousel-btn next" type="button" aria-label="Imagen siguiente">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+                  </button>
+                  <button class="carousel-zoom" type="button" aria-label="Ampliar imagen">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6M8 11h6"></path></svg>
+                  </button>
+                  <div class="carousel-dots" aria-label="Seleccionar imagen"></div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <div class="project-title">
+                    <strong>Deuda Cero</strong>
+                  </div>
+                  <span class="project-date">2026 · <span data-i18n="proj.statusDone">completado</span></span>
+                </div>
+                <p class="project-role" data-i18n="proj.role">Backend Developer · proyecto personal</p>
+                <p data-i18n="proj.p2">API REST para gestionar gastos compartidos: grupos, invitaciones, movimientos y cálculo automático de balances por miembro.</p>
+                <ul class="project-highlights">
+                  <li data-i18n="proj.h2a">Dashboard con lo que debes, lo que te deben y tu balance por grupo.</li>
+                  <li data-i18n="proj.h2b">Roles USER/ADMIN y roles internos de grupo con protección BOLA.</li>
+                </ul>
+                <ul class="project-tags" aria-label="Tecnologías">
+                  <li>Java 21</li>
+                  <li>Spring Boot</li>
+                  <li>JWT</li>
+                  <li>MySQL</li>
+                  <li>Spring Security</li>
+                </ul>
+                <div class="meta"><a href="https://github.com/aldors/deuda_cero" target="_blank" rel="noopener" data-i18n="proj.repo">ver repositorio</a></div>
+              </div>
+            </article>
+            <article class="project">
+              <div class="project-media">
+                <div class="carousel" data-carousel>
+                  <div class="carousel-track">
+                    <div class="carousel-slide">
+                      <img src="img/e-commerce-inicio.png" width="1335" height="523" alt="Pantalla de inicio del proyecto E-commerce" loading="lazy" title="Ampliar imagen" />
+                    </div>
+                  </div>
+                  <button class="carousel-zoom" type="button" aria-label="Ampliar imagen">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path><path d="M11 8v6M8 11h6"></path></svg>
+                  </button>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-head">
+                  <div class="project-title">
+                    <strong>E-commerce</strong>
+                  </div>
+                  <span class="project-date">2026 · <span data-i18n="proj.statusDone">completado</span></span>
+                </div>
+                <p class="project-role" data-i18n="proj.role">Backend Developer · proyecto personal</p>
+                <p data-i18n="proj.p3">API REST de comercio electrónico: catálogo, carrito persistente, órdenes e historial, con JWT (access + refresh), roles y paginación.</p>
+                <ul class="project-highlights">
+                  <li data-i18n="proj.h3a">Testing unitario con JUnit 5, Mockito y MockMvc.</li>
+                  <li data-i18n="proj.h3b">Swagger/OpenAPI, validaciones, soft delete y manejo global de excepciones.</li>
+                </ul>
+                <ul class="project-tags" aria-label="Tecnologías">
+                  <li>Java 21</li>
+                  <li>Spring Boot</li>
+                  <li>JWT</li>
+                  <li>MySQL</li>
+                  <li>JUnit</li>
+                  <li>Swagger</li>
+                </ul>
+                <div class="meta"><a href="https://github.com/aldors/e-commerce" target="_blank" rel="noopener" data-i18n="proj.repo">ver repositorio</a></div>
+              </div>
+            </article>
           </div>
         </div>
       </div>
@@ -129,62 +304,61 @@
         <div class="terminal-body narrow">
           <h2><span class="prompt-dim">$</span> <span data-i18n="stack.title">stack</span></h2>
           <div class="skills">
-            <div class="skill"><span class="skill-name"><i class="devicon-java-plain"></i> Java</span><span class="dim">POO · programación funcional · collections · exceptions</span></div>
-            <div class="skill"><span class="skill-name"><i class="devicon-spring-plain"></i> Spring Boot</span><span class="dim">REST · persistencia · validación · seguridad</span></div>
-            <div class="skill"><span class="skill-name"><i class="devicon-mysql-plain"></i> MySQL</span><span class="dim">modelado · consultas · agregaciones</span></div>
-            <div class="skill"><span class="skill-name"><i class="devicon-git-plain"></i><i class="devicon-github-original"></i> Git · GitHub</span><span class="dim">versionado · ramas · colaboración</span></div>
-            <div class="skill"><span class="skill-name"><img class="brand-ico" src="https://cdn.simpleicons.org/apachemaven/7ddfa0" alt="Maven" loading="lazy" /><img class="brand-ico" src="https://cdn.simpleicons.org/postman/7ddfa0" alt="Postman" loading="lazy" /> Maven · Postman</span><span class="dim">build · prueba de endpoints</span></div>
-            <div class="skill"><span class="skill-name"><i class="devicon-bash-plain"></i> Terminal</span><span class="dim" data-i18n="stack.term">bash · navegación · permisos</span></div>
-            <div class="skill"><span class="skill-name"><span class="mini-badge">{}</span> <span data-i18n="stack.fund">Fundamentos</span></span><span class="dim">HTTP · JSON · buenas prácticas</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-java-plain"></i> Java 21</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-spring-plain"></i> Spring Boot</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-spring-plain"></i> Spring Security + JWT</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-mysql-plain"></i> MySQL + JPA/Hibernate</span></div>
+            <div class="skill"><span class="skill-name"><span class="mini-badge check">✓</span> Testing</span></div>
+            <div class="skill"><span class="skill-name"><span class="mini-badge">API</span> Swagger/OpenAPI</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-docker-plain"></i> Docker</span></div>
+            <div class="skill"><span class="skill-name"><i class="devicon-git-plain"></i><i class="devicon-github-original"></i> Git · GitHub</span></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="proyectos" class="section">
+    <section id="sobre-mi" class="section">
       <div class="window reveal">
         <div class="window-bar">
           <div class="traffic"><span></span><span></span><span></span></div>
-          <div class="window-title">$ ls ./projects</div>
+          <div class="window-title">$ cat sobre-mi.txt</div>
         </div>
         <div class="terminal-body narrow">
-          <h2><span class="prompt-dim">$</span> <span data-i18n="proj.title">proyectos</span></h2>
-          <p class="dim small" data-i18n="proj.sub">3 APIs en mejora continua. Código abierto en GitHub.</p>
-          <div class="projects">
-            <article class="project">
-              <strong>e-commerce <span class="dim small">· abr 2026</span></strong>
-              <p data-i18n="proj.p1">API REST con Spring Boot para comercio electrónico: catálogo, carrito y pedidos, usuarios y stock, con JPA/Hibernate, validaciones y MySQL. Segura con Spring Security: JWT, roles y sesiones.</p>
-              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/e-commerce" target="_blank" rel="noopener">code ↗</a></div>
-            </article>
-            <article class="project">
-              <strong>deuda_cero <span class="dim small">· jul 2026</span></strong>
-              <p data-i18n="proj.p2">API REST con Spring Boot para gastos compartidos: registro de gastos entre usuarios, cálculo de saldos y deudas, con validaciones y MySQL. Segura con JWT, roles y sesiones.</p>
-              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/deuda_cero" target="_blank" rel="noopener">code ↗</a></div>
-            </article>
-            <article class="project">
-              <strong>event_pass <span class="dim small">· sep 2026</span></strong>
-              <p data-i18n="proj.p3">API REST con Spring Boot para eventos: creación y publicación, reserva y venta de boletos y validación de entradas para control de acceso, con MySQL. Segura con JWT, roles y sesiones.</p>
-              <div class="meta"><span>Spring Boot · MySQL · JWT</span><a href="https://github.com/aldors/event_pass" target="_blank" rel="noopener">code ↗</a></div>
-            </article>
-          </div>
+          <h2><span class="prompt-dim">$</span> <span data-i18n="about.title">sobre mí</span></h2>
+          <p data-i18n="about.p1">Desarrollador Backend enfocado en Java 21 y Spring Boot. Construyo APIs REST con JWT, persistencia en MySQL, testing y documentación OpenAPI.</p>
+          <p class="dim" data-i18n="about.p2">Trabajo con arquitectura en capas, DTOs y manejo global de excepciones; me enfoco en APIs mantenibles y seguras.</p>
         </div>
       </div>
     </section>
 
-    <section id="contacto" class="section">
+    <section id="formacion" class="section">
       <div class="window reveal">
         <div class="window-bar">
           <div class="traffic"><span></span><span></span><span></span></div>
-          <div class="window-title">$ ./contactar.sh</div>
+          <div class="window-title">$ cat formacion.log</div>
         </div>
         <div class="terminal-body narrow">
-          <h2><span class="prompt-dim">$</span> <span data-i18n="contact.title">contacto</span></h2>
-          <p class="dim" data-i18n="contact.sub">¿Tienes prácticas o una vacante trainee? Respondo en menos de 24h.</p>
-          <div class="contact-links">
-            <button class="linklike" data-copy="aldorgithub@gmail.com">aldorgithub@gmail.com ⧉</button>
-            <a href="https://github.com/aldors" target="_blank" rel="noopener">github ↗</a>
-            <span class="disabled" title="LinkedIn">linkedin</span>
-            <span class="disabled" title="CV">↓ CV</span>
+          <h2><span class="prompt-dim">$</span> <span data-i18n="edu.title">formación</span></h2>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-head">
+                <span class="tl-date">2024 — 2027/28</span>
+                <strong data-i18n="edu.e1t">Ing. en Sistemas Computacionales</strong>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-head">
+                <span class="tl-date">ago 2026</span>
+                <strong data-i18n="edu.e2t">Certificado en SQL · aprendesql.dev</strong>
+              </div>
+              <p class="tl-link"><a href="https://www.aprendesql.dev/certificado/d119493c-c82a-4a86-9715-8ddc0021f057" target="_blank" rel="noopener" data-i18n="edu.e2">ver certificado</a></p>
+            </div>
+            <div class="tl-item">
+              <div class="tl-head">
+                <span class="tl-date">actual</span>
+                <strong data-i18n="edu.e3t">Formación continua · Backend</strong>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -197,6 +371,21 @@
   </footer>
 
   <div id="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="lightbox" class="lightbox" aria-label="Vista ampliada de la imagen">
+    <div class="lightbox-inner">
+      <button id="lightbox-close" class="lightbox-btn close" type="button" aria-label="Cerrar">×</button>
+      <button id="lightbox-prev" class="lightbox-btn nav prev" type="button" aria-label="Imagen anterior">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg>
+      </button>
+      <img id="lightbox-img" alt="" />
+      <button id="lightbox-next" class="lightbox-btn nav next" type="button" aria-label="Imagen siguiente">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+      </button>
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+  </dialog>
+
   <script src="script.js"></script>
 </body>
 </html>
